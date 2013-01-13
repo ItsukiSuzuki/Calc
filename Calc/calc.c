@@ -2,7 +2,6 @@
 /* 計算プログラム */
 
 #include <stdio.h>
-#include <stdlib.h>
 int add(int, int);
 int sub(int, int);
 int mult(int, int);
