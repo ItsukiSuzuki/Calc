@@ -41,9 +41,9 @@ void main(void){
 }
 
 int add(int x, int y) {				/* 加算処理 */
-	int sum;
-	sum = x + y;
-	return sum;
+	int result;
+	result = x + y;
+	return result;
 }
 
 int sub(int x, int y) {				/* 減算処理 */
