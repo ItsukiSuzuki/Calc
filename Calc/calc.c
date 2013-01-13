@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 int add(int, int);
+int sub(int, int);
 
 void main(void){
 	int x, y, i, r;
@@ -21,8 +22,8 @@ void main(void){
 			r = add(x, y);	/* 加算処理へ */
 			break;
 		}else if (i == 2) {
-			printf("減算処理は作られていません\n");
-			exit(1);
+			r = sub(x, y);	/* 減算処理へ */
+			break;
 		}else if (i == 3) {
 			printf("乗算処理は作られていません\n");
 			exit(1);
@@ -42,4 +43,10 @@ int add(int x, int y) {				/* 加算処理 */
 	int sum;
 	sum = x + y;
 	return sum;
+}
+
+int sub(int x, int y) {				/* 減算処理 */
+	int result;
+	result = x - y;
+	return result;
 }
