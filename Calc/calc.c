@@ -6,6 +6,7 @@
 int add(int, int);
 int sub(int, int);
 int mult(int, int);
+int divi(int, int);
 
 void main(void){
 	int x, y, i, r;
@@ -29,8 +30,8 @@ void main(void){
 			r = mult(x, y);	/* 乗算処理へ */
 			break;
 		}else if (i == 4) {
-			printf("除算処理は作られていません\n");
-			exit(1);
+			r = divi(x, y);  /* 除算処理へ */
+			break;
 		}else {
 			printf("エラー:指定された値が間違っています もう一度入力して下さい\n");	/* エラー:1～4以外が入力された */
 		}																			/* もう一度入力をさせる */
@@ -55,5 +56,11 @@ int sub(int x, int y) {				/* 減算処理 */
 int mult(int x, int y) {			/* 乗算処理 */
 	int result;
 	result = x * y;
+	return result;
+}
+
+int divi(int x, int y) {			/* 除算処理 */
+	int result;
+	result = x / y;
 	return result;
 }
