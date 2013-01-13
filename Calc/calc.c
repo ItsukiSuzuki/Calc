@@ -5,6 +5,7 @@
 #include <stdlib.h>
 int add(int, int);
 int sub(int, int);
+int mult(int, int);
 
 void main(void){
 	int x, y, i, r;
@@ -25,8 +26,8 @@ void main(void){
 			r = sub(x, y);	/* 減算処理へ */
 			break;
 		}else if (i == 3) {
-			printf("乗算処理は作られていません\n");
-			exit(1);
+			r = mult(x, y);	/* 乗算処理へ */
+			break;
 		}else if (i == 4) {
 			printf("除算処理は作られていません\n");
 			exit(1);
@@ -48,5 +49,11 @@ int add(int x, int y) {				/* 加算処理 */
 int sub(int x, int y) {				/* 減算処理 */
 	int result;
 	result = x - y;
+	return result;
+}
+
+int mult(int x, int y) {			/* 乗算処理 */
+	int result;
+	result = x * y;
 	return result;
 }
